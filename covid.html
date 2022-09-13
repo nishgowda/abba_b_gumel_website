@@ -1,0 +1,584 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Abba B. Gumel</title>
+
+  <meta property="og:title" content="Abba B. Gumel">
+  <meta property="og:type" content="website">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- your content here... -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #FFEDC9;">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="images/umd-math-logo.png" alt="math-logo" width="200">
+		</a>		  
+
+	    <ul class="navbar-nav" style="margin-right: 100px;" >
+	      <li class="nav-item">
+		<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+	      </li>
+	      <li class="nav-item dropstart">
+		<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		 Contacts 
+		</a>
+		<ul class="dropdown-menu p-4 text-muted"  style="max-width: 300px;">
+			<li><a class="dropdown-item">Office: 3111 Kirwan Hall</a></li>
+			<li><a class="dropdown-item">Phone: (480) 727 2690</a></li>
+			<li><a class="dropdown-item">Email: agumel@umd.edu</a></li>
+			<li><hr class="dropdown-divider"></li>
+			<p><strong>Other Affiliations:</strong></p>
+			    <p><a href="https://biology.umd.edu/">Dept. of Biology</a> & <a href="https://ipst.umd.edu/">Institute for Physical Science Technology</a>, University of Maryland College Park </p>
+			    <p>Extraordinary Professor, <a href="https://www.up.ac.za/mathematics-and-applied-mathematics/">Dept. Mathematics and Applied Mathematics</a>, University of Pretoria, South Africa</p>
+			    <p>Adjunct Professor,<a href="https://uwaterloo.ca/applied-mathematics/"> Dept. of Applied Mathematics</a>, University of Waterloo</p>
+			<li><a class="dropdown-item"></a></li>
+			<li><a class="dropdown-item"></a></li>
+			<li><a class="dropdown-item"></a></li>
+			<li><a class="dropdown-item"></a></li>
+		      </ul>
+		    </li>
+		  </ul>
+	      </li>
+	    </ul>
+	</div>
+      </nav>
+      
+     
+      
+      <div class="container-xl">
+		<h3 class="display-6 text-center">Mathematical Modeling of COVID-19 Dynamics and Control</h3>
+		
+		 <!-- page navs -->
+		 <ul class="nav justify-content-center">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#burden-data">Data</a>
+			</li>
+			
+			<li class="nav-item">
+			  <a class="nav-link" href="#important-resources">Important Resources</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#background-information">Background Information</a>
+			      </li>
+			<li class="nav-item">
+				<a class="nav-link" href="#published-articles">Published Articles and Preprints</a>
+			      </li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#news">News & Media Events</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#team-members">Team Members</a>
+			</li>
+		      </ul>
+		
+		
+		
+		<div id="burden-data" style="margin-top: 5%;">
+			<h4>Burden Data</h4>
+			<table class="table table-bordered">
+				<caption class="text-center">Source: <a id="lst_update" target="_blank" href="https://coronavirus.jhu.edu/map.html">John's Hopkins University (Last Updated: 09/10/22)</a></caption>
+				<thead>
+				  <tr>
+					<th scope="col"></th>
+				    <th scope="col">Total Cases</th>
+				    <th scope="col">Total Deaths</th>
+				  </tr>
+				</thead>
+				<tbody class="table-group-divider">
+				  <tr>
+				    <th scope="row">Global</th>
+				    <td id="gcase">606,539,159</td>
+				    <td id="gdeath">6,507,096</td>
+				  </tr>
+				  <tr>
+				    <th scope="row">U.S</th>
+				    <td id="ucase">95,224,801</td>
+				    <td id="udeath">1,050,290</td>
+				  </tr>
+				</tbody>
+			      </table>
+		</div>
+	
+	<hr/>
+	<div id="covid-models" class="container text-center" style="margin-top: 5%;">
+		<div class="row row-cols-1">
+			<div class="col"><img src="images/Omicron-Delta-fitting-prediction.jpg" class="img-fluid" alt="covid-prediction" style="width: 60%;"></div>
+			<div class="col"><img src="images/Omicron-flowdiagram.jpg" class="img-fluid" alt="Omicron-flowdiagram" style="width: 40%;"></div>
+			<div class="col"><img src="images/Omicron-mask-coverage_page-0001.jpg" class="img-fluid" alt="Omicron-flowdiagram" style="width: 60%;"></div>
+			<div class="col"><img src="images/TimeSeries_Mask_Vaccine_page-0001.jpg" class="img-fluid" alt="Omicron-flowdiagram" style="width: 60%;"></div>
+			<div class="col"><img src="images/Vaccine_Efficacy_vs_Coverage_page-0001.jpg" class="img-fluid" alt="Omicron-flowdiagram" style="width: 50%;"></div>
+
+		</div>
+
+	</div>
+	<hr/>
+	<div id="important-resources">
+		<h4>Important Resources</h4>
+		<h6>Data Sources</h6>
+		<ol>
+			<li>
+		      <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+		      <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv"> Confirmed US Cases </a>
+		    </span>
+		  </li>
+		    <br>
+		    <li>
+		    <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+		    <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"> Confirmed Global Cases </a>
+		  </span>
+		</li>
+		<br>
+		<li>
+		<span class="body_link" style="padding: 2px;margin-bottom: 20px">
+		<a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv"> Confirmed US Deaths </a>
+	      </span>
+	    </li>
+	    <br>
+	    <li>
+	    <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+	    <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"> Confirmed Global Deaths </a>
+	      </span>
+	    </li>
+	    <br>
+	    <li>
+	    <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+	    <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv"> Confirmed Global Recovered: </a>
+	      </span>
+	    </li>
+	  </ol>
+		<h6>Policy Documents</h6>
+		<ol>
+			<li>
+		      <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+		      <a href="https://www.azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php?utm_source=google_grant&amp;utm_medium=cpc&amp;utm_campaign=covid19&amp;utm_term=covid#novel-coronavirus-home"> Arizona's Emergency Response to COVID-19 </a>
+		    </span>
+		  </li>
+		    <br>
+		    <li>
+		    <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+		    <a href="https://www.cdc.gov/coronavirus/2019-ncov/cdcresponse/index.html"> CDC's Response to COVID-19</a>
+		  </span>
+		</li>
+		  <br>
+		<li>
+		<span class="body_link" style="padding: 2px;margin-bottom: 20px">
+		<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/planning-scenarios.html"> CDC's COVID-19 Pandemic Scenarios (Parameter Values for Modeling) </a>
+	      </span>
+	    </li>
+	      <br>
+	    <li>
+	    <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+	    <a href="./masks_IDM_article.pdf"> CDC's Guidelines on  How Communities Should Plan, Prepare and Respond to COVID-19</a>
+	  </span>
+	  <br>
+	  <ul>
+	    <br>
+	    <li>
+	      <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/organizations/businesses-employers.html">Businesses and Wokplaces</a>
+	</li>
+	<br>
+	<li>
+	  <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/index.html">Childcare, Schools and Youth Programs</a>
+	</li>
+	<br>
+	<li>
+	  <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities/index.html">Colleges and Universities</a>
+	</li>
+	<br>
+	<li>
+	  <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/parks-rec/index.html">Parks and Recreational Facilities</a>
+	</li>
+	<br>
+	<li>
+	  <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/organizations/index.html">Community and Faith-based Organizations</a>
+	</li>
+	<br>
+	<li>
+	  <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/first-responders.html">First Responders</a>
+	</li>
+	<br>
+      </ul>
+	  <br>
+	</li><li>
+	<span class="body_link" style="padding: 2px;margin-bottom: 20px">
+	<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"> World Health Organization:  Coronavirus Pandemic</a>
+      </span>
+      </li>
+      <br>
+      <li>
+      <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+      <a href="https://en.wikipedia.org/wiki/White_House_Coronavirus_Task_Force"> White House Coronavirus Task Force (Wikipedia)</a>
+    </span>
+    </li>
+    <br>
+    <li>
+    <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+    <a href="https://www.dhs.gov/coronavirus"> Department of Homeland Security: COVID-19 Response</a>
+  </span>
+  </li>
+  <br>
+  <li>
+  <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+  <a href="https://covid19.healthdata.org/united-states-of-america"> Institute for Health Metrics and Evaluation (IHME) COVID-19 Projections</a>
+  </span>
+  </li>
+  <br>
+  <li>
+  <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+  <a href="https://www.coronatracker.com/country/brazil/"> Brazil COVID-19 Tracker</a>
+  </span>
+  </li>
+  <br>
+  <li>
+  <span class="body_link" style="padding: 2px;margin-bottom: 20px">
+  <a href="https://www.cdc.gov/coronavirus/2019-ncov/covid-data/mathematical-modeling.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcases-updates%2Fmathematical-modeling.html">CDC COVID-19 Mathematical Modeling</a>
+  </span>
+  </li>
+  <br>
+      </ol>
+	</div>
+
+	<hr/>
+	<div id="background-information">
+		<h4>Background Information</h4>
+		<p class="text-start">
+			The world is currently facing a devastating pandemic of a novel coronavirus (COVID-19), which started as an outbreak of pneumonia of unknown cause in the Wuhan city of China in December of 2019. Within days and weeks, the COVID-19 pandemic has spread to over 210 countries. By May 15, 2020, COVID-19 has caused over 4.5 million confirmed cases and 307,000 fatalities globally. China was the original epicenter of COVID-19, followed by Italy and now the United States (with the state of New York shouldering the overwhelming brunt of the COVID-19 burden). As of May 15, 2020, the US has recorded over 1.4 million confirmed cases and 87,000 deaths. The first documented confirmed case of COVID-19 in the US was reported on January 20, 2020. This was linked to a resident who has returned from a trip to Wuhan city. Although recent modeling data showed that COVID-19 was already spreading in the state of New York by late January 2020, the "first case” (i.e., index case) in the state was officially documented on March 1, 2020. This was traced to a woman who traveled to New York city from Iran.
+		</p>
+		<p class="text-start">
+			The dates for the official documentation of the index cases for New York state and the entire US were given to illustrate an important point, namely the exponential nature of the spread of the COVID-19 pandemic during the early stages of its outbreak. Starting with the officially documented "index case” on March 1, 2020, the state of New York recorded nearly 70,000 by the end of March 2020 (with about 1000 deaths). Further, the number of confirmed cases skyrocketed to over 300,000 by the end of April 2020 (and 17,000 deaths). These numbers clearly illustrate the exponential spread of the pandemic! We will come back to this later. Most of the COVID-19 related deaths and severe cases occur in the elderly (65 years of age and older) and people with co-morbidities (such as people with diabetes, hypertension, obesity, kidney disease and other conditions that suppress or compromise the immune system, such as people living with HIV/AIDS). Younger people and frontline healthcare workers are also at high risk of acquiring COVID-19 infection. This article introduces some of the basic principles associated with the use of mathematics to understand the transmission dynamics and control of infectious diseases, such as COVID-19, in human populations.
+		</p>
+		<p class="text-start">
+			Coronaviruses (CoV) represent a major group of RNA viruses that cause diseases in mammals and birds. Human coronaviruses (HCoV) represent a major group of coronaviruses associated with multiple respiratory diseases of varying severity, including common cold, pneumonia and bronchiolitis. While the mild form of coronavirus infections causes diseases such as the common cold, the lethal form can cause diseases like the severe acute respiratory syndrome (SARS-CoV), middle eastern respiratory syndrome (MERS) and COVID-19 (caused by SARS-CoV-2). The name "coronavirus” is derived from the Latin word "Corona” for crown or wreath. It signifies "the characteristic appearance of the virions (the infective form of the virus), which have a fringe of large, bulbous surface projections creating an image reminiscent of the solar corona or halo”. In other words, "coronaviruses” are the crown-jewel of all viruses here on earth.
+		</p>
+		<p class="text-start">
+			Zoonotic scientists estimate that there are millions of viruses in the wild, and humans are always vulnerable to mutations in these zoonotic viruses that could trigger pandemics. HCoVs, rated among the most rapidly evolving viruses due their genetic makeup (notably due to their high genomic nucleotide substitution rates and recombination), have their origins in bats and rodents. Data shows that the evolution of HCoVs has been expedited in recent years due to urbanization and poultry farming (resulting in the frequent mixing of species and facilitating the crossing of species barrier and genomic recombination of these viruses).
+		</p>
+		<p class="text-start">
+			Six known human coronaviruses have been identified in recent years. These include the 2002/2003 pandemic of severe acute respiratory syndrome (SARS-CoV), a highly transmissible disease which started in the Guandong province in China and spread to 29 countries (causing 8,000 cases and 744 fatalities globally), and the 2012 pandemic of the middle eastern respiratory syndrome (MERS-CoV), which started out of Saudi Arabia and spread to 27 countries (causing 2,519 cases and 866 deaths by January 2020). Over 80% of MERS-CoV occurred in Saudi Arabia. Palm civet and bats were implicated as the natural reservoirs of SARS-CoV (which has a mortality rate of 10%). MERS-CoV, which was believed to have likely originated from bats, and then likely spread from infected dromedary camels to humans, has a mortality rate of about 35%. Both SARS-CoV and MERS-CoV have similar clinical symptoms, namely atypical pneumonia marked by fever, headache and subsequent onset of respiratory symptoms (such as cough and pneumonia), which may later develop into life-threatening respiratory failure and acute respiratory distress syndrome.
+
+
+		</p>
+	</div>
+	<hr/>
+	<div id="published-articles">
+		<h4>Published Articles</h4>
+		<ol>
+			<br>
+			<li>
+			    <a href="./NPIs_MBS2020_paper_published.pdf">Mathematical Assesment of the impact of Non-pharmaceutical interventions on curtailing the 2019 novel Coronavirus</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./masks_IDM_article.pdf">To Mask or not to mask: Modeling the potential for face mask use by the general public to curtail the COVID-19 pandemic</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./COVID-Nigeria2020.pdf">Mathematical Modeling and Analysis of COVID-19 pandemic in Nigeria</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./COVID_Vaccine_IDM.pdf">Will an imperfect vaccine curtail the COVID-19 pandemic in the U.S.?</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./Lockdown_paper.pdf">Could masks curtail the post-lockdown resurgence of COVID-19 in the US?</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./Primer-paper.pdf">A primer on using mathematics to understand COVID-19 dynamics</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./COVID_variants_paper.pdf">Will vaccine-derived protective immunity curtail COVID-19 variants in the US?</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./Delta_Omicron_Project.pdf">Unraveling the dynamics of Omicron and Delta variants of COVID-19 in the presence of vaccination and mask usage</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./Frontiers_public_health_paper.pdf">
+Toward Achieving a Vaccine-Derived Herd Immunity Threshold for COVID-19 in the U.S.</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./IDM_metapopulation_India_Pakistan.pdf">Dynamics of COVID-19 pandemic in India and Pakistan: A metapopulation modelling approach</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./JMB_heterogeneity_paper.pdf">Vaccination and herd immunity thresholds in heterogeneous populations</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./rsos.210699.pdf">Assessing the impact of
+widespread respirator use
+in curtailing COVID-19
+transmission in the USA</a>
+			</li>
+			<br>
+			    </ol>
+	</div>
+	<hr/>
+	<div id="news">
+		<h4>News and Media Events</h4>
+		<ol id="pageSubmenu">
+			<li>
+			    <a href="./ASU_Now_Masks.pdf">Going out in public during Covid19 Pandemic</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./ASU_Now_NPIs.pdf">Nonpharmaceutical interventions can control or eliminate COVID-19</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./Masks4all_press_release.pdf">Press Release: Top scientists find masks are ‘potentially of high value’ against Covid19</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./Washington_State_Literature_Report_2020_05_05.pdf">2019-nCoV Literature Situation Report May 5, 2020</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://news.clas.ufl.edu/model-shows-how-masks-and-social-distancing-could-control-coronavirus/">How Masks and Social Distancing Could Control Coronavirus</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./New_Mexico_Health_Department_Article.pdf">New Mexico Health Department</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.phoenixnewtimes.com_news_arizona-2Dcovid-2Dmasks-2D20-2Dquestions-2Danswered-2Dby-2Dasu-2Dexperts-2D11474894&amp;d=DwMFaQ&amp;c=l45AxH-kUV29SRQusp9vYR0n1GycN4_2jInuKy6zbqQ&amp;r=FJCyN4DJ9e_s2YHg7ZSss4zdkTXEWB2_LIytqt-HI58&amp;m=DxlDkcMqgkU1HgeCk4cXzbr-68Akk1W_VxIiZ5Y42Ao&amp;s=E2orbiOlL-x_FFOGKpUYkTuGLZVlgFmUWbnQ5woOTXs&amp;e=">'What If I Hate Masks?': 20 Questions on COVID Coverings, Answered by ASU Experts</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.sciencenews.org/article/covid-19-coronavirus-why-wearing-masks-controversial">Why scientists say wearing masks shouldn’t be controversial</a>
+			</li>
+			<br>
+			<br>
+			<li>
+			    <a href="https://www.npr.org/2020/07/03/886905055/widespread-use-of-face-masks-could-save-tens-of-thousands-of-lives-models-projec">NPR Radio Inteview</a>
+			    <iframe src="https://www.npr.org/player/embed/886905055/887128925" width="100%" height="220" frameborder="0" scrolling="no" title="NPR embedded audio player"></iframe>
+			</li>
+			<li>
+			    <a href="./if-ppih-covid-19-sag-models-scenarios-and-thresholds-rapid-review.pdf">Covid-19 Scientific Advisory Group Rapid Evidence Report</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./DHS_June30_2020_Weekly_Report.pdf">Master Question List for COVID-19</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.azfamily.com/news/continuing_coverage/coronavirus_coverage/duceys-office-calls-new-york-times-article-on-coronavirus-in-arizona-misleading/article_3c9881a2-c18b-11ea-8e6f-af59bf207536.html">Ducey's office calls 'New York Times' article on coronavirus in Arizona 'misleading'</a>
+			</li>
+			<br>
+			<li>
+			    <a href="./WHO_report_masks.pdf">STAG-IH views on mask use by the general public</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://asunow.asu.edu/20210113-asu-mathematicians-share-research-and-expertise-joint-math-meetings">ASU mathematicians share research and expertise at Joint Math Meetings</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.salon.com/2021/01/31/swapping-facemasks-could-save-lives-heres-how-to-upgrade/">Swapping facemasks could save lives. Here’s how to upgrade</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.phoenixnewtimes.com/news/arizona-covid-19-study-shows-how-state-inaction-costs-lives-11480225">Arizona's Current COVID-19 Surge Could Last Through December, New Model Shows</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://urldefense.com/v3/__http://www.ams.org/meetings/lectures/meet-einstein-lect__;!!IKRxdwAv5BmarQ!NlGqCX9gmNzuHq6-zHDaG-jCXtGxh3a2x7Ll0T0wLx55CHRop40HK4iC9-stUGEc$">Professor Gumel gives the 2021 AMS Einstein Public lecture in Mathematics.</a>
+			    <br>
+			    <a href="https://urldefense.com/v3/__https://www.youtube.com/watch?v=OMRA4VQ9A3k&amp;t=77s__;!!IKRxdwAv5BmarQ!NlGqCX9gmNzuHq6-zHDaG-jCXtGxh3a2x7Ll0T0wLx55CHRop40HK4iC98rn6Nwq$">Click here for the link to the video of the lecture</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://news.asu.edu/20210406-asu-professor-delivers-einstein-public-lecture-mathematics">ASU professor delivers Einstein Public Lecture in Mathematics</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://news.asu.edu/20210618-2-asu-mathematicians-win-bellman-prize-malaria-transmission-article">2 ASU mathematicians win Bellman Prize for malaria transmission article</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://issuu.com/asuoked/docs/1-year-covid-review_050621">SoMSS researchers highlighted on Page 19 of President Crow's one-year review of ASU's contributions to community response against the COVID-19 pandemic</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.civilbeat.org/2021/07/should-people-who-got-covid-19-count-toward-herd-immunity/">Should People Who Got COVID-19 Count Toward Herd Immunity?</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.abc.net.au/news/2021-07-15/fact-check-is-hotel-quarantine-99-9-per-cent-successful/100289242">Australia's Prime Minister Scott Morrison says hotel quarantine has been 99.9 per cent successful. Is that correct?</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://news.asu.edu/20210917-new-study-assesses-impact-widespread-respirator-use-curtailing-covid-19-transmission-us">ASU-led study finds use of respirator masks could have prevented spread of COVID-19</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.siam.org/prizes-recognition/fellows-program/all-siam-fellows/class-of-2022">2022 Class of SIAM Fellows</a>
+			</li>
+			<br>
+		      </ol>
+	</div>
+	<hr/>
+	<div id="team-members">
+		<h4>Team Members</h4>
+		<h6>Faculty</h6>
+		<ul id="pageSubmenu">
+			<li>
+			    <a href="https://math.la.asu.edu/~gumel/">Abba B. Gumel (Team Leader), Foundation Professor of Mathematics, School of Mathematical
+and Statistical Sciences, Arizona State University</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://people.clas.ufl.edu/calistusnn/">Calistus N. Ngonghala, Assistant Professor, Department of Mathematics, University of Florida </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://biodesign.asu.edu/matthew-scotch">Matthew Scotch, Department of Biomedical Informatics, College of Health Solutions &amp;
+Biodesign Center for Environmental Health Engineering, Arizona State University</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://research.unsw.edu.au/people/professor-raina-macintyre">Raina MacIntyre (Faculty of Medicine, The Kirby Institute, University of New South Wales, Australia &amp; College of Health Solutions &amp; College of Public Affairs and Community Solutions, Arizona State University</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://ghsm.hms.harvard.edu/faculty-staff/matthew-bonds">Matthew Bonds, Department of Global Health and Social Medicine, Harvard Medical School </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://math.asu.edu/node/3245">Steffen Eikenberry, School of Mathematical and Statistical Sciences, Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://math.la.asu.edu/~milner/welc_eng.html">Fabio Milner, School of Mathematical and Statistical Sciences, Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="">Baltazar Espinoza Cortes, Simon Levin Mathematical, Computational Modelling Sciences Center, Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://labs.wsu.edu/schwartz/">Elissa Schwartz, School of Biological Sciences, and Department of Mathematics, Washington State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://math.la.asu.edu/~kuang/">Yang Kuang, School of Mathematical and Statistical Sciences, Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://math.la.asu.edu/~eric/">Eric Kostelich,  School of Mathematical and Statistical Sciences, Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.spelman.edu/academics/majors-and-programs/mathematics/faculty">Enahoro Iboi, Mathematics Department, Spelman College, USA</a>
+			</li>
+			<br>
+		      </ul>
+		<h6>Private Sector</h6>
+		<ul id="pageSubmenu">
+
+			<li>
+			    <a href="https://www.merck.com/index.html/">Elamin H. Elbasha,  Merck Inc., USA</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.merck.com/index.html">Tufail M. Malik, Merck Inc., USA</a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://www.merck.com/index.html/">Oluwaseun Sharomi, Merck Inc., USA</a>
+			</li>
+			<br>
+		      </ul>
+		<h6>Students</h6>
+		<ul id="pageSubmenu">
+
+			<li>
+			    <a href="https://math.asu.edu/node/3550">Adel Mohammed S. Alatawi, Graduate Student, School of Mathematical and Statistical Sciences,
+Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="">Samantha Brozak, Graduate Student, School of Mathematical and Statistical Sciences, Arizona
+State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="https://math.asu.edu/node/4386">Binod Pant, Graduate Student, School of Mathematical and Statistical Sciences, Arizona State
+University</a>
+			</li>
+			<br>
+			<li>
+			    <a href="">Harishankhar Prabhakaran, Graduate Student, Department of Mechanical Engineering (System
+Control), Arizona State University </a>
+			</li>
+			<br>
+			<li>
+			    <a href="">Ke Shen, Undergraduate Student, School of Mathematical and Statistical Sciences, Arizona State
+University</a>
+			</li>
+			<br>
+			<li>
+			    <a href="">Akash Anickode, High School Student (BASIS High School, Scottsdale, Arizona) </a>
+			</li>
+			<br>
+		      </ul>
+	</div>
+	<hr/>
+</div>
+<footer class="text-center text-xl-start text-muted">
+	<section class="">
+      <div class="container text-center text-md-start mt-5">
+	<!-- Grid row -->
+	<div class="row mt-3">
+      
+	  <!-- Grid column -->
+	  <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+	    <!-- Links -->
+	    <h6 class="text-uppercase fw-bold mb-4">
+	      Contacts
+	    </h6>
+	    <p>
+	      <a href="#!" class="text-reset">Office: 3111 Kirwan Hall</a>
+	    </p>
+	    <p>
+	      <a href="#!" class="text-reset">Phone: (480) 727 2690</a>
+	    </p>
+	    <p>
+	      <a href="#!" class="text-reset">Email: agumel@umd.edu</a>
+	    </p>
+	  </div>    
+	  <!-- Grid column -->
+	  <div class="col-md-5 col-lg col-xl mb-4">
+	    <!-- Links -->
+	    <h6 class="text-uppercase fw-bold mb-4">
+	      Other Affiliations
+	      </h6>
+	      <p><a href="https://biology.umd.edu/">Dept. of Biology</a> & <a href="https://ipst.umd.edu/">Institute for Physical Science Technology</a>, University of Maryland College Park </p>
+	      <p>Extraordinary Professor, <a href="https://www.up.ac.za/mathematics-and-applied-mathematics/">Dept. Mathematics and Applied Mathematics</a>, University of Pretoria, South Africa</p>
+	      <p>Adjunct Professor,<a href="https://uwaterloo.ca/applied-mathematics/"> Dept. of Applied Mathematics</a>, University of Waterloo</p>
+	  </div>    
+	</div>
+	<!-- Grid row -->
+      </div>
+    </section>
+      </footer>	
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
