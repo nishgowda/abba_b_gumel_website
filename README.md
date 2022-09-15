@@ -1,11 +1,11 @@
 # abba_b_gummel_website
 
 
-# Steps:
+## Steps:
 1. Open Putty on your local computer
 2. Log into terpconnect by
 3. Put hostname as ```terpconnect.umd.edu```
 4. change directories to pub/agumel by
 	```cd /pub/agumel```
 5. download the files from github by 
-	```git clone https://github.com/nishgowda/abba_b_gumel_website.git . ```
+	```git pull origin master```
