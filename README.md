@@ -3,7 +3,7 @@
 ## How to Edit:
 The main portion of the website exists under ```index.html```. 
 
-First, ```control f``` or scroll to find the section you want to change (each section is labeled).
+First, ```control f Start of (section)``` or scroll to find the section you want to change (each section is labeled).
 
 (This general format is consistent for all other parts of the website also, so changing/updating parts will be similar)
 
